@@ -10,11 +10,8 @@ export default function DashboardTiles() {
         role="list"
         className="mt-3 grid grid-cols-1 gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4"
       >
-        {projects.map((project) => (
-          <li
-            key={project.name}
-            className="col-span-1 flex shadow-sm rounded-md"
-          >
+        {projects.map((project, index) => (
+          <li key={index} className="col-span-1 flex shadow-sm rounded-md">
             <div
               className={classNames(
                 project.bgColor,
